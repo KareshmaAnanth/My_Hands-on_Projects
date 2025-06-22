@@ -3,9 +3,11 @@
 # Deploy an App with Docker
 
 **Project Link:** [View Project](http://learn.nextwork.org/projects/aws-compute-eb)
+**My Portfolio** [Here](https://learn.nextwork.org/easygoing_white_heroic_bilberry/portfolio)
+
 
 **Author:** Kareshma Rajaananthapadmanaban  
-**Email:** kareshma2909@gmail.com
+**Linkedin:** [Click here](https://www.linkedin.com/in/kareshma-rajaananthapadmanaban/)
 
 ---
 
