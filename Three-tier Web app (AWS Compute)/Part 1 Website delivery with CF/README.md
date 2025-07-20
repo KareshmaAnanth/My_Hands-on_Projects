@@ -4,8 +4,13 @@
 
 **Project Link:** [View Project](http://learn.nextwork.org/projects/aws-networks-cloudfront)
 
+**My Portfolio** [Here](https://learn.nextwork.org/easygoing_white_heroic_bilberry/portfolio)
+
 **Author:** Kareshma Rajaananthapadmanaban  
-**Email:** kareshma2909@gmail.com
+**Linkedin:** [Click here](https://www.linkedin.com/in/kareshma-rajaananthapadmanaban/)
+
+**Presentation tier Documentation:** [Detailed](https://github.com/KareshmaAnanth/My_Hands-on_Projects/blob/9233cc7b4c0887f21a017758c9cc13d5b76735b4/Three-tier%20Web%20app%20(AWS%20Compute)/Part%201%20Website%20delivery%20with%20CF/Three-tier%20part%201%20Presentation%20tier.pdf)  
+
 
 ---
 
