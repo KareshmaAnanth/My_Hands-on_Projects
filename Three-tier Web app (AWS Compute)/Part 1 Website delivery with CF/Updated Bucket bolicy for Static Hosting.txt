@@ -1,0 +1,32 @@
+Static Hosting Bucket policy :   
+
+{
+        "Version": "2008-10-17",
+        "Id": "PolicyForCloudFrontPrivateContent",
+        "Statement": [
+            {
+                "Sid": "AllowCloudFrontServicePrincipal",
+                "Effect": "Allow",
+                "Principal": {
+                    "Service": "cloudfront.amazonaws.com"
+                },
+                "Action": "s3:GetObject",
+                "Resource": "arn:aws:s3:::nextwork-three-tier-kareshma-29/*",
+                "Condition": {
+                    "StringEquals": {
+                      "AWS:SourceArn": "arn:aws:cloudfront::390403864104:distribution/EQY4O9NAM3CQJ"
+                    }
+                }
+            }
+        ]
+      },
+      {
+        "Sid": "PublicReadGetObject",
+        "Effect": "Allow",
+        "Principal": "*",
+        "Action": "s3:GetObject",
+        "Resource": "arn:aws:s3:::nextwork-three-tier-[your-name]-[random-numbers]/    *"
+      }
+  ]
+
+}

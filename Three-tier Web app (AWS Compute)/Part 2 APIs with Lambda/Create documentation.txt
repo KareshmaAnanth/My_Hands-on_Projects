@@ -1,0 +1,4 @@
+{
+  "description": "The UserRequestAPI manages user data retrieval and manipulation. It supports operations to retrieve user details based on unique identifiers.",
+  "baseURL": "https://yo8z6vf1ql.execute-api.us-east-2.amazonaws.com/"
+}
