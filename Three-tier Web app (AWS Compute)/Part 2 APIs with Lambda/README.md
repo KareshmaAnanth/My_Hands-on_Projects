@@ -11,6 +11,8 @@
 
 **Logic tier Documentation:** [Detailed](https://github.com/KareshmaAnanth/My_Hands-on_Projects/blob/01690a63bbc2c686176f1f728f609a2b647ee1bf/Three-tier%20Web%20app%20(AWS%20Compute)/Part%202%20APIs%20with%20Lambda/Three%20-%20tier%20Part%202%20Logic%20tier.pdf)
 
+⚠️*GitHub sometimes just fails to preview certain PDFs, but the file is still downloadable and safe*
+
 ---
 
 ![Image](http://learn.nextwork.org/easygoing_white_heroic_bilberry/uploads/aws-compute-api_c9d0e1f2)
