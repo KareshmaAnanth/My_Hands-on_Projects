@@ -4,8 +4,12 @@
 
 **Project Link:** [View Project](http://learn.nextwork.org/projects/aws-compute-api)
 
+**My Portfolio** [Here](https://learn.nextwork.org/easygoing_white_heroic_bilberry/portfolio)
+
 **Author:** Kareshma Rajaananthapadmanaban  
-**Email:** kareshma2909@gmail.com
+**Linkedin:** [Click here](https://www.linkedin.com/in/kareshma-rajaananthapadmanaban/)
+
+**Logic tier Documentation:** [Detailed](https://github.com/KareshmaAnanth/My_Hands-on_Projects/blob/01690a63bbc2c686176f1f728f609a2b647ee1bf/Three-tier%20Web%20app%20(AWS%20Compute)/Part%202%20APIs%20with%20Lambda/Three%20-%20tier%20Part%202%20Logic%20tier.pdf)
 
 ---
 
