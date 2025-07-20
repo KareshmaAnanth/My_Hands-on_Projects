@@ -11,6 +11,8 @@
 
 **Data tier Documentation:** [Detailed](https://github.com/KareshmaAnanth/My_Hands-on_Projects/blob/7b2dc23bf1ec4c1de13115cc2226ee793e41775f/Three-tier%20Web%20app%20(AWS%20Compute)/Part%203%20Fetch%20data%20with%20AWS%20Lambda/Three%20-%20tier%20Part%203%20Data%20tier.pdf) 
 
+⚠️*GitHub sometimes just fails to preview certain PDFs, but the file is still downloadable and safe*
+
 ---
 
 ## Fetch Data with AWS Lambda
