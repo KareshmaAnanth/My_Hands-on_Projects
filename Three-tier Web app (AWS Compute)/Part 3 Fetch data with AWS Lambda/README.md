@@ -4,8 +4,12 @@
 
 **Project Link:** [View Project](http://learn.nextwork.org/projects/aws-compute-lambda)
 
+**My Portfolio** [Here](https://learn.nextwork.org/easygoing_white_heroic_bilberry/portfolio)
+
 **Author:** Kareshma Rajaananthapadmanaban  
-**Email:** kareshma2909@gmail.com
+**Linkedin:** [Click here](https://www.linkedin.com/in/kareshma-rajaananthapadmanaban/)
+
+**Data tier Documentation:** [Detailed](https://github.com/KareshmaAnanth/My_Hands-on_Projects/blob/7b2dc23bf1ec4c1de13115cc2226ee793e41775f/Three-tier%20Web%20app%20(AWS%20Compute)/Part%203%20Fetch%20data%20with%20AWS%20Lambda/Three%20-%20tier%20Part%203%20Data%20tier.pdf) 
 
 ---
 
