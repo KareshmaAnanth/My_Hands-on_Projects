@@ -4,8 +4,14 @@
 
 **Project Link:** [View Project](http://learn.nextwork.org/projects/aws-compute-threetier)
 
+**My Portfolio** [Here](https://learn.nextwork.org/easygoing_white_heroic_bilberry/portfolio)
+
 **Author:** Kareshma Rajaananthapadmanaban  
-**Email:** kareshma2909@gmail.com
+**Linkedin:** [Click here](https://www.linkedin.com/in/kareshma-rajaananthapadmanaban/)
+
+**3 tier Web app Documentation:** [Detailed](https://github.com/KareshmaAnanth/My_Hands-on_Projects/blob/be258e4de0a9472b6c78860e492f3d2130386977/Three-tier%20Web%20app%20(AWS%20Compute)/Three%20tier%20Web%20app%20final%20combined%20part/Three-tier%20Web%20app.pdf)
+
+⚠️*GitHub sometimes just fails to preview certain PDFs, but the file is still downloadable and safe*
 
 ---
 
