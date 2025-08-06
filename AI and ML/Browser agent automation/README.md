@@ -4,8 +4,14 @@
 
 **Project Link:** [View Project](http://learn.nextwork.org/projects/ai-agent-webui)
 
+**My Portfolio** [Here](https://learn.nextwork.org/easygoing_white_heroic_bilberry/portfolio)
+
 **Author:** Kareshma Rajaananthapadmanaban  
-**Email:** kareshma2909@gmail.com
+**Linkedin:** [Click here](https://www.linkedin.com/in/kareshma-rajaananthapadmanaban/)
+
+**Automating Browser with AI:** [Detailed](https://github.com/KareshmaAnanth/My_Hands-on_Projects/blob/4c2b4df90de86b3c257e6030e4a6a8054c6d57ae/AI%20and%20ML/Browser%20agent%20automation/Browser%20automation%20with%20ai-agent-webui.pdf)
+
+⚠️*GitHub sometimes just fails to preview certain PDFs, but the file is still downloadable and safe*
 
 ---
 
