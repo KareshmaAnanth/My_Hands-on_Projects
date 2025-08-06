@@ -1,0 +1,109 @@
+## In Windows 
+
+1 #To Install dev tools 
+
+python --version # Check Python
+pip --version # Check Pip
+uv --version # Check UV
+git --version # Check Git
+
+2 #Upgrade the tools if needed
+
+python -m pip install --upgrade pip # Upgrade Pip to the latest version
+pip install --upgrade uv # Upgrade UV to the latest version
+
+3 #Install & Run WebUI
+
+Navigate to your Documents directory: cd %USERPROFILE%\Documents
+Clone the repository: git clone https://github.com/browser-use/web-ui.git
+Navigate into the web-ui directory: cd web-ui
+
+4 #Set up the Python Virtual Environment
+
+Create the virtual environment: uv venv --python 3.12.3
+Activate the virtual environment: .venv\Scripts\activate
+
+5 #Install Packages
+
+ Install packages listed in requirements.txt : uv pip install -r requirements.txt
+
+ install Playwright: playwright install
+
+ Verify Installation : playwright --version
+
+6 #Set Up Environment File 
+
+Copy the environment file: copy .env.example .env
+
+7 #Run Your Agent in WebUI
+
+python3 webui.py --ip 127.0.0.1 --port 7788 (or)
+
+python webui.py --ip 127.0.0.1 --port 7788
+
+
+8 #Nomodulefounderror - Edit the browser_settings_tab.py
+
+Replace this line:
+
+from distutils.util import strtobool
+
+with a custom function in the same file:
+
+def strtobool(val):
+    val = val.lower()
+    if val in ('y', 'yes', 't', 'true', 'on', '1'):
+        return True
+    elif val in ('n', 'no', 'f', 'false', 'off', '0'):
+        return False
+    else:
+        raise ValueError(f"Invalid truth value: {val}")
+
+This avoids any external dependency.
+
+
+9 #Verify WebUI
+
+Running on local URL: Open your web browser and go to 
+
+ http://127.0.0.1:7788 (or) http://127.0.0.1:7788/?__theme=dark
+
+
+ ##SECRET MISSION - Use your own browser
+
+
+10 #Browser settings in .env update 
+
+Use Notepad .env and start Updating 
+
+BROWSER_PATH="C:\Program Files\Google\Chrome\Application\chrome.exe"
+BROWSER_USER_DATA="C:\Users\Your_Username\AppData\Local\Google\Chrome\User Data"
+KEEP_BROWSER_OPEN=false
+USE_OWN_BROWSER=true
+
+11 #Manually launch Chrome in debug mode
+You'll need to start Chrome with the right flags so Playwright can hook into it
+
+C:\Program Files\Google\Chrome\Application\chrome.exe" --remote-debugging-port=9242 --user-data-dir="C:\chrome-debug
+
+Then Run 
+
+python webui.py --ip 127.0.0.1 --port 7788
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
