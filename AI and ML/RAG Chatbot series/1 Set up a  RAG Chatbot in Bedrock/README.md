@@ -28,6 +28,8 @@ Before you start:
 - Access to **Amazon S3**, **IAM**, and **OpenSearch Service**.
 - Basic familiarity with **AWS Management Console** and **CLI**.
 
+---
+
 ### Tools and concepts
 
 Services I used were Amazon Bedrock, S3, and OpenSearch. Key concepts I learnt include creating and managing a Knowledge Base, setting up vector stores for retrieval, and integrating S3 as a data source. I also explored guardrails, query modification, and best practices like cleaning up unused resources to avoid extra costs.
