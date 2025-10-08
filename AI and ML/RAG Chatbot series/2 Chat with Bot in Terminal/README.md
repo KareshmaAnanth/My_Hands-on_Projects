@@ -9,7 +9,7 @@
 **Author:** Kareshma Rajaananthapadmanaban  
 **Linkedin:** [Click here](https://www.linkedin.com/in/kareshma-rajaananthapadmanaban/)
 
-**Automating Browser with AI:** [Detailed](https://github.com/KareshmaAnanth/My_Hands-on_Projects/blob/3e99f2338426880b0628f15b6a2fc94bd383b5d6/AI%20and%20ML/RAG%20Chatbot%20series/2%20Chat%20with%20Bot%20in%20Terminal/AI-RAG-Chat%20with%20Bot%20in%20Cloudshell.pdf)
+**Chat with Bot in the Terminal:** [Detailed](https://github.com/KareshmaAnanth/My_Hands-on_Projects/blob/3e99f2338426880b0628f15b6a2fc94bd383b5d6/AI%20and%20ML/RAG%20Chatbot%20series/2%20Chat%20with%20Bot%20in%20Terminal/AI-RAG-Chat%20with%20Bot%20in%20Cloudshell.pdf)
 
 ⚠️*GitHub sometimes just fails to preview certain PDFs, but the file is still downloadable and safe*
 
