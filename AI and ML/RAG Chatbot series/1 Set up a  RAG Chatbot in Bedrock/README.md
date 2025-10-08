@@ -4,8 +4,14 @@
 
 **Project Link:** [View Project](http://learn.nextwork.org/projects/ai-rag-bedrock)
 
+**My Portfolio** [Here](https://learn.nextwork.org/easygoing_white_heroic_bilberry/portfolio)
+
 **Author:** Kareshma Rajaananthapadmanaban  
-**Email:** kareshma2909@gmail.com
+**Linkedin:** [Click here](https://www.linkedin.com/in/kareshma-rajaananthapadmanaban/)
+
+**Set up a RAG Chatbot in Bedrock :** [Detailed]()
+
+⚠️*GitHub sometimes just fails to preview certain PDFs, but the file is still downloadable and safe*
 
 ---
 
