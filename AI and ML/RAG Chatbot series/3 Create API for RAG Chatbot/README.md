@@ -4,8 +4,14 @@
 
 **Project Link:** [View Project](http://learn.nextwork.org/projects/ai-rag-api)
 
+**My Portfolio** [Here](https://learn.nextwork.org/easygoing_white_heroic_bilberry/portfolio)
+
 **Author:** Kareshma Rajaananthapadmanaban  
-**Email:** kareshma2909@gmail.com
+**Linkedin:** [Click here](https://www.linkedin.com/in/kareshma-rajaananthapadmanaban/)
+
+**Create API for RAG Chatbot:** [Detailed](https://github.com/KareshmaAnanth/My_Hands-on_Projects/blob/199b0613b5365a8a9c0edc7fd158d6f7521aba7c/AI%20and%20ML/RAG%20Chatbot%20series/3%20Create%20API%20for%20RAG%20Chatbot/AI-RAG%20-%20Creating%20API%20for%20Chatbot.pdf)
+
+⚠️*GitHub sometimes just fails to preview certain PDFs, but the file is still downloadable and safe*
 
 ---
 
@@ -19,6 +25,13 @@
 
 In this project, I will demonstrate how to turn my RAG chatbot into an API that any application can access. I'm doing this project to learn how to connect Amazon Bedrock with FastAPI so my chatbot isn’t limited to the console or terminal. This way, I can make it production-ready and integrate it into websites, apps, or even other tools.
 
+## ⚙️ Prerequisites
+- **AWS CLI configured** with valid credentials.  
+- **Knowledge Base** and **Bedrock model** ready (from Project 1 & 2).  
+- **Python 3.10+** installed locally.
+
+--- 
+
 ### Tools and concepts
 
 Services I used were Amazon Bedrock for calling foundation models, FastAPI for building API endpoints, and dotenv for managing environment variables. Key concepts I learnt include the difference between MODEL_ID and MODEL_ARN, how to extend an API with new endpoints, handling environment variables, and the contrast between direct model invocation and Knowledge Base queries.
@@ -28,6 +41,93 @@ Services I used were Amazon Bedrock for calling foundation models, FastAPI for b
 This project took me approximately 2 hours to complete. The most challenging part was troubleshooting the missing MODEL\_ID environment variable for the new endpoint. It was most rewarding to see the chatbot handle both Knowledge Base queries and direct AI model questions, giving me flexibility to use specialized or general knowledge.
 
 I did this project today to deepen my hands-on understanding of how Retrieval-Augmented Generation works in AWS Bedrock and to practice extending APIs for both document-based and general AI queries. This project met my goals because I now feel more confident in configuring endpoints, managing environment variables, and explaining the difference between Knowledge Base and direct model calls.
+
+---
+
+## 🎯 Project Objectives
+- Clone the project repository and set up a Python environment.  
+- Configure your Knowledge Base and Model ARN in `.env`.  
+- Run your API using **Uvicorn**.  
+- Query your chatbot through a web browser or app.
+
+---
+
+## 🧩 Key Learnings
+- Built a FastAPI backend to serve a RAG chatbot.
+- Configured environment variables for Bedrock integration.
+- Fixed dependency and configuration errors.
+- Tested endpoints and validated API responses
+
+---
+
+
+## 🚀 Steps to Complete
+
+### 1. Clone the Repository
+Open PowerShell and clone your API project:
+```powershell
+git clone <repository-HTTPS-URL>
+cd rag-chatbot-api
+```
+
+## 2. Create and Activate a Virtual Environment
+
+**Create a virtual environment**:
+```
+python -m venv venv
+```
+
+**Activate it**:
+```
+.\venv\Scripts\activate
+```
+
+## 3. Install Dependencies
+
+**Install all required packages**:
+```
+pip install -r requirements.txt
+```
+
+If you see **ModuleNotFoundError**: No module named 'uvicorn', rerun the above command.
+
+## 4. Configure Environment Variables
+
+Create an **.env** file to store credentials:
+```
+New-Item .env
+notepad .env
+```
+
+Add the following lines (replace placeholders):
+```
+AWS_REGION=us-east-2
+KNOWLEDGE_BASE_ID=<your_knowledge_base_id>
+MODEL_ARN=<your_model_arn>
+```
+
+Save and close the file.
+
+## 5. Run the API Server
+
+Launch the API:
+```
+python -m uvicorn main:app --reload
+```
+
+If successful, you’ll see something like:
+
+Application startup complete.
+**Uvicorn running** on http://127.0.0.1:8000
+
+## 6. Test the Query Endpoint
+
+Visit this URL in your browser:
+
+http://127.0.0.1:8000/bedrock/query?text=What%20is%20NextWork
+
+
+If configured correctly, you’ll get a response from your chatbot — congrats, your API is live!
 
 ---
 
@@ -111,5 +211,12 @@ When I use /bedrock/query, the chatbot first searches my Knowledge Base for cont
 ![Image](http://learn.nextwork.org/easygoing_white_heroic_bilberry/uploads/ai-rag-api_u8d9e0f1)
 
 ---
+## 🧹 Clean Up Resources
 
+To avoid charges, delete:
+
+- Bedrock Knowledge Base
+- S3 bucket used for documents
+- IAM access key
+- OpenSearch vector store
 ---
