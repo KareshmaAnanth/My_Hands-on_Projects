@@ -4,8 +4,15 @@
 
 **Project Link:** [View Project](http://learn.nextwork.org/projects/ai-rag-cloudshell)
 
+**My Portfolio** [Here](https://learn.nextwork.org/easygoing_white_heroic_bilberry/portfolio)
+
 **Author:** Kareshma Rajaananthapadmanaban  
-**Email:** kareshma2909@gmail.com
+**Linkedin:** [Click here](https://www.linkedin.com/in/kareshma-rajaananthapadmanaban/)
+
+**Automating Browser with AI:** [Detailed](https://github.com/KareshmaAnanth/My_Hands-on_Projects/blob/3e99f2338426880b0628f15b6a2fc94bd383b5d6/AI%20and%20ML/RAG%20Chatbot%20series/2%20Chat%20with%20Bot%20in%20Terminal/AI-RAG-Chat%20with%20Bot%20in%20Cloudshell.pdf)
+
+⚠️*GitHub sometimes just fails to preview certain PDFs, but the file is still downloadable and safe*
+
 
 ---
 
@@ -19,6 +26,12 @@
 
 In this project, I will build a RAG chatbot that answers questions directly from the terminal using Amazon Bedrock. I'm doing this project to learn how to interact with my chatbot through the AWS CLI in CloudShell, manage a Knowledge Base without relying on the console, and practice command-line workflows. This helps me gain practical skills useful for DevOps and backend engineering, where speed, automation, and control matter.
 
+## ⚙️ Prerequisites
+- **AWS CLI v2** installed on your system.  
+- **IAM user** with Bedrock access and permissions.  
+- **Access Key ID** and **Secret Access Key** ready.  
+- Knowledge Base and S3 bucket same as Part 1 
+
 ### Tools and concepts
 
 The services I used were Amazon Bedrock, S3, CloudShell, and the Bedrock Agent/Runtime. The key concepts I learnt included creating and uploading files to S3, syncing and updating a Knowledge Base through ingestion jobs, retrieving responses from a Knowledge Base, and invoking AI models directly from the CLI for both knowledge-specific and creative tasks.
@@ -29,6 +42,84 @@ This project took me approximately 2 hours to complete. The most challenging par
 
 
 I did this project today to push myself beyond just using the AWS console and get more comfortable with managing services directly from the CLI. Yes, it met my goals I wanted hands-on practice with Bedrock, S3, and Knowledge Bases, and I also learned how to interact with AI models in the terminal. It gave me both confidence and practical skills I can reuse in future projects.
+
+---
+
+## 🎯 Project Objectives
+- Install and configure the **AWS CLI** locally.  
+- Authenticate using **IAM access keys**.  
+- Invoke the **Bedrock model** through the terminal.  
+- Send test prompts to your RAG chatbot and review responses.
+
+--- 
+
+ ## 🧩 Key Learnings
+- Installed and configured the AWS CLI locally.
+- Understood how to authenticate with IAM credentials.
+- Invoked Bedrock models directly through terminal commands.
+- Gained experience debugging AWS CLI authentication errors.
+
+---
+
+
+
+## 🚀 Steps to Complete
+
+### 1. Install AWS CLI
+Run the command based on your OS:
+
+**Windows PowerShell**
+```powershell
+msiexec.exe /i https://awscli.amazonaws.com/AWSCLIV2.msi ```
+
+**Verify installation**:
+```powershell
+aws --version 
+```
+
+### 2. Configure AWS CLI
+
+**Authenticate your AWS CLI session**:
+```powershell
+aws configure
+```
+
+Enter:
+
+- Access Key ID
+- Secret Access Key
+- Region (e.g., us-east-2)
+- Default Output Format (press Enter to skip)
+
+This connects your terminal to your AWS account securely.
+
+### 3. Invoke Bedrock Model
+
+**Try a sample command to test your model access**:
+```
+aws bedrock-runtime invoke-model \
+--model-id <your_model_id> \
+--body '{"prompt": "What is Retrieval-Augmented Generation?"}' \
+output.json
+```
+
+Open the output.json file to view your chatbot’s response.
+
+### 4. Troubleshoot Common Errors
+
+If you see:
+
+Unable to **locate credentials** / You must specify a region
+
+
+- Run aws configure again to set credentials properly.
+
+If you see:
+
+**AccessDeniedException**
+
+
+- Make sure your IAM role or user has AmazonBedrockFullAccess permissions.
 
 ---
 
@@ -90,6 +181,12 @@ On top of chatting with my chatbot, I also interacted directly with an AI model 
 
 
 ![Image](http://learn.nextwork.org/easygoing_white_heroic_bilberry/uploads/ai-rag-cloudshell_gregerg)
+
+---
+
+## 🧹 Clean Up Resources
+- Delete your IAM Access Key once testing is complete.
+- Avoid leaving credentials active unnecessarily for security.
 
 ---
 
