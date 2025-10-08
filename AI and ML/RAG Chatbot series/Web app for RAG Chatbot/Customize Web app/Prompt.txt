@@ -1,0 +1,20 @@
+Make sure to attach the original index.html and style.css files to the prompt
+
+PROMPT : 
+
+
+I have attached the original index.html file (along with style.css) that implements a chat application using API calls (to endpoints like /bedrock/invoke and /bedrock/query). I'd like you to generate a completely custom HTML frontend that:
+
+1. Retains the same API integration:
+   - Use the same mechanisms for triggering the API (i.e. send chat messages via the same endpoints as in the original index.html).
+   - Ensure that only the expected user text is sent (i.e. avoid prepending extra system prompts to the API request if it might break the backend).
+
+2. Provides a new visual design:
+   - The design should be entirely different from the original.
+   - You may override the provided style.css by writing new CSS code directly in the index.html (i.e. adding inline styles or a <style> block) to achieve the custom aesthetic, whether it's whimsical, minimalist, or any other style - all while keeping the API integration unchanged.
+
+3. Is plug-and-play:
+   - The new frontend must work with the existing backend API without changes.
+   - All necessary JavaScript (for sending messages, displaying loading indicators, and updating the chat window) should be included in the HTML.
+
+Please produce a complete, self-contained HTML file that implements this new frontend while ensuring that the API function calls and error handling remain the same as in the attached original index.html.
