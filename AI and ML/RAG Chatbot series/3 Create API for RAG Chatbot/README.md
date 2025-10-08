@@ -70,7 +70,7 @@ git clone <repository-HTTPS-URL>
 cd rag-chatbot-api
 ```
 
-## 2. Create and Activate a Virtual Environment
+### 2. Create and Activate a Virtual Environment
 
 **Create a virtual environment**:
 ```
@@ -82,7 +82,7 @@ python -m venv venv
 .\venv\Scripts\activate
 ```
 
-## 3. Install Dependencies
+### 3. Install Dependencies
 
 **Install all required packages**:
 ```
@@ -91,7 +91,7 @@ pip install -r requirements.txt
 
 If you see **ModuleNotFoundError**: No module named 'uvicorn', rerun the above command.
 
-## 4. Configure Environment Variables
+### 4. Configure Environment Variables
 
 Create an **.env** file to store credentials:
 ```
@@ -108,7 +108,7 @@ MODEL_ARN=<your_model_arn>
 
 Save and close the file.
 
-## 5. Run the API Server
+### 5. Run the API Server
 
 Launch the API:
 ```
@@ -120,7 +120,7 @@ If successful, you’ll see something like:
 Application startup complete.
 **Uvicorn running** on http://127.0.0.1:8000
 
-## 6. Test the Query Endpoint
+### 6. Test the Query Endpoint
 
 Visit this URL in your browser:
 
