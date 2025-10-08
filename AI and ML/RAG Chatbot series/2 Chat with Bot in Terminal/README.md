@@ -191,5 +191,3 @@ On top of chatting with my chatbot, I also interacted directly with an AI model 
 - Avoid leaving credentials active unnecessarily for security.
 
 ---
-
----
