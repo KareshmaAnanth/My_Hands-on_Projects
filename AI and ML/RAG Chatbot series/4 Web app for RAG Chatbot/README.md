@@ -4,8 +4,14 @@
 
 **Project Link:** [View Project](http://learn.nextwork.org/projects/ai-rag-webapp)
 
+**My Portfolio** [Here](https://learn.nextwork.org/easygoing_white_heroic_bilberry/portfolio)
+
 **Author:** Kareshma Rajaananthapadmanaban  
-**Email:** kareshma2909@gmail.com
+**Linkedin:** [Click here](https://www.linkedin.com/in/kareshma-rajaananthapadmanaban/)
+
+**Web app for RAG Chatbot:** [Detailed](https://github.com/KareshmaAnanth/My_Hands-on_Projects/blob/b14d6754df09011b1a58d9349975b54a20056e8b/AI%20and%20ML/RAG%20Chatbot%20series/4%20Web%20app%20for%20RAG%20Chatbot/AI%20-%20RAG%20-%20Web%20app%20for%20Chatbot.pdf)
+
+⚠️*GitHub sometimes just fails to preview certain PDFs, but the file is still downloadable and safe*
 
 ---
 
@@ -19,6 +25,13 @@
 
 In this project, I will demonstrate how to build a fully functional web app for my RAG chatbot. I’m doing this project to learn how to connect a frontend chat interface with an API-powered backend that uses Amazon Bedrock and a knowledge base in S3. This final step is about making the chatbot accessible, scalable, and user-friendly, while gaining hands-on skills in web development and AI integration.
 
+## ⚙️ Prerequisites
+- **Project 3 API** running successfully on `http://127.0.0.1:8000`.  
+- **Amazon Bedrock** access with Knowledge Base and Model ARN configured.  
+- **Python 3.10+** and **FastAPI** installed.
+
+---
+
 ### Tools and concepts
 
 Services I used were Amazon Bedrock for model inference, AWS IAM for secure access, and FastAPI with Uvicorn to build and run the chatbot API. I also worked with dotenv to manage environment variables and integrated a web frontend to interact with the backend. Key concepts I learnt include Retrieval-Augmented Generation (RAG), separating frontend and backend layers, secure credential handling, and how enabling or disabling RAG changes chatbot behavior.
@@ -28,6 +41,124 @@ Services I used were Amazon Bedrock for model inference, AWS IAM for secure acce
 This project took me approximately 2 hours and 30 minutes. The most challenging part was troubleshooting API integration and ensuring the chatbot responded correctly with and without RAG enabled. It was most rewarding to see the chatbot pull accurate answers from my knowledge base and experience the difference in responses when switching between general AI knowledge and RAG-based retrieval.
 
 I did this project today to practice building with Amazon Bedrock and get hands-on with Retrieval-Augmented Generation concepts. My goal was to understand how different AWS services connect to create a working chatbot with a custom knowledge base. The project met my goals because I learned how to set up, test, and clean up the entire workflow while strengthening both my cloud and AI integration skills.
+
+---
+
+## 🎯 Project Objectives
+- Build a frontend (`index.html`) for your chatbot web app.  
+- Connect it to backend API endpoints (`/bedrock/query` and `/bedrock/invoke`).  
+- Add custom styling and UI functionality.  
+- Run and test the chatbot in a browser.
+
+---
+
+## 🧠 Key Learnings
+- Connected a frontend UI with FastAPI endpoints.
+- Rendered chatbot responses dynamically in a browser.
+- Understood how frontend and backend communicate via APIs.
+- Learned to safely modify UI without affecting backend logic.
+
+---
+
+## 🚀 Steps to Complete
+
+### 1. Create S3 and Knowlege Base 
+- Create an S3 bucket to store your chatbot's training materials.
+- Upload documents that your chatbot will learn from.
+- In the Amazon Bedrock console, create Knowlege Base with vector store 
+
+### 2. Cloning the Web App
+- Copy the web app's code from GitHub to your local machine.
+GitHub repository : [RAG Chatbot](https://github.com/NatNextWork1/nextwork-rag-webapp)
+
+**Create Project Structure** 
+
+Inside your project directory, create a new folder for the web app:
+```powershell
+cd %USERPROFILE%\Documents
+``` 
+Open PowerShell and clone your API project:
+```powershell
+git clone <repository-HTTPS-URL>
+cd rag-chatbot-webapp
+```
+Files in repo :
+```
+web_app/
+│
+├── web_app.py
+└── static/
+    ├── index.html
+    └── style.css
+``` 
+**Create a virtual environment**:
+```
+python -m venv venv
+```
+
+**Activate it**:
+```
+.\venv\Scripts\activate
+```
+### 3. Testing the Backend 
+- Test that your web app's backend code is working properly
+- Run the backend code locally.
+
+Run the API to start the server : 
+```
+python -m uvicorn main:app --reload
+```
+**ModuleNotFoundError** : No module named uvicorn
+
+Install the requirements 
+```
+cat requirements.txt
+```
+```
+pip3 install -r requirements.txt
+```
+```
+pip3 list
+
+```
+Re run the API 
+```
+python -m uvicorn main:app --reload
+```
+Yay, no more errors! You should see a message like Uvicorn running on http://127.0.0.1:8000 in your terminal.
+
+### 4. Run the Web App
+
+Start the FastAPI server using Uvicorn:
+```
+python uvicorn web_app:app --reload
+```
+
+Open your browser at:
+
+http://127.0.0.1:8000
+
+
+You’ll see your chatbot ready for conversation — type a question and interact directly through the web interface!
+
+## 5. Test with and without RAG
+
+Add your MODEL_ID to the **.env** file:
+
+```
+MODEL_ID= meta.llama3-3-70b-instruct-v1:0
+```
+
+Try toggling between responses that use the Knowledge Base (RAG) and those that don’t.
+
+You’ll notice how context-rich answers come from RAG queries.
+
+### 6. Customize Web app 
+- Use a ChatGPT prompt to generate a new HTML file or modify the existing index.html.
+- Integrate the generated HTML into your project.
+- Test your customized web app.
+
+Customize Web app HTML: [Link](https://github.com/KareshmaAnanth/My_Hands-on_Projects/tree/b14d6754df09011b1a58d9349975b54a20056e8b/AI%20and%20ML/RAG%20Chatbot%20series/4%20Web%20app%20for%20RAG%20Chatbot/Customize%20Web%20app)
 
 ---
 
@@ -115,5 +246,37 @@ My customized interface now features a clean, modern dark theme with two distinc
 ![Image](http://learn.nextwork.org/easygoing_white_heroic_bilberry/uploads/ai-rag-webapp_cust24680)
 
 ---
+
+## 🧹 Clean Up Resources
+To avoid charges, delete:
+- Bedrock Knowledge Base
+- S3 bucket used for documents
+- OpenSearch Serverless collection (vector store)
+- IAM access key
+- Cloned repository and virtual environment
+Deactivate the environment:
+```
+deactivate
+```
+---
+
+📎 Related Projects
+
+1️⃣ [Set Up a RAG Chatbot in Bedrock]()
+
+2️⃣ [Chat with the Bot in the Terminal]()
+
+3️⃣ [Create an API for the RAG Chatbot]()
+
+### Final Thought
+
+Building a web app for your RAG Chatbot completes the cycle — from data ingestion to a working AI chat interface. The best part? You now have a foundation you can scale, style, and share.
+
+---
+
+🎯 Why I Did This Project
+
+I wanted to complete the full journey of building a RAG chatbot from setup to a real web app interface.
+This project met my goal of understanding how AI, backend logic, and UI come together to create an interactive chatbot experience.
 
 ---
