@@ -9,14 +9,11 @@
 **Author:** Kareshma Rajaananthapadmanaban  
 **Linkedin:** [Click here](https://www.linkedin.com/in/kareshma-rajaananthapadmanaban/)
 
-**Set up a RAG Chatbot in Bedrock :** [Detailed]()
+**Set up a RAG Chatbot in Bedrock :** [Detailed](https://github.com/KareshmaAnanth/My_Hands-on_Projects/blob/801c080222791a4933ab6b8ea0fecce75a7623dd/AI%20and%20ML/RAG%20Chatbot%20series/1%20Set%20up%20a%20%20RAG%20Chatbot%20in%20Bedrock/AI-Setup-RAG-Bedrock.pdf)
 
 ⚠️*GitHub sometimes just fails to preview certain PDFs, but the file is still downloadable and safe*
 
 ---
-
-## Set Up a RAG Chatbot in Bedrock
-
 ![Image](http://learn.nextwork.org/easygoing_white_heroic_bilberry/uploads/ai-rag-bedrock_d5e8f1g2)
 
 ---
