@@ -30,7 +30,9 @@ In this project, I will build a RAG chatbot that answers questions directly from
 - **AWS CLI v2** installed on your system.  
 - **IAM user** with Bedrock access and permissions.  
 - **Access Key ID** and **Secret Access Key** ready.  
-- Knowledge Base and S3 bucket same as Part 1 
+- Knowledge Base and S3 bucket same as Part 1
+
+---
 
 ### Tools and concepts
 
