@@ -1,0 +1,211 @@
+##1 Create S3 bucket and Knowledge Base
+##2 Choose an AI model 
+##3 Run AWS Command
+
+#Configure AWS CLI in terminal to log in
+
+Run aws configure 
+Enter your Access Key, Secret Key, region (e.g. us-east-2), and output format (json)
+
+Set Up AWS Access Keys
+
+Users-> IAM Admin user -> Security credentials -> Access keys section -> Create access key
+
+Run Your Bedrock Command 
+
+aws bedrock-agent-runtime retrieve-and-generate \
+   --input '{"text": "What is NextWork?"}' \
+   --retrieve-and-generate-configuration '{
+       "knowledgeBaseConfiguration": {
+           "knowledgeBaseId": "your_knowledge_base_id",
+           "modelArn": "your_model_arn"
+  },
+  "type": "KNOWLEDGE_BASE"
+}'
+
+## Finding Your Knowledge Base and Model ARN & IDs
+
+1) Find the Knowledge Base ID from the overview panel.
+2) Find Your Model ARN
+
+In the CloudShell terminal, run the following command to find the ARN of your model.
+
+aws bedrock get-foundation-model --model-identifier <your-model-id>
+ 
+To find Model ID, Open Bedrock console again 
+ - Select Model catalog
+ - where you can find all the models available in Bedrock, and find metadata about each model - like the Model ID.
+ - Find the Llama 3.3 70B Instruct model.
+ - Copy the Model ID from the details panel
+
+Now again run this in cloudshell to return the model ARN 
+
+aws bedrock get-foundation-model --model-identifier meta.llama3-3-70b-instruct-v1:0
+
+Replace the KnowledgeBase ID and Model ARN with the command 
+
+aws bedrock-agent-runtime retrieve-and-generate \
+    --input '{"text": "What is NextWork?"}' \
+    --retrieve-and-generate-configuration '{
+        "knowledgeBaseConfiguration": {
+            "knowledgeBaseId": "your_knowledge_base_id",
+            "modelArn": "your_model_arn"
+        },
+        "type": "KNOWLEDGE_BASE"
+    }' \
+    --query 'output.text' \
+    --output text
+
+##4 Set Up Your API
+
+- Set up a Python development environment
+- Create an API
+- Connect your API to Amazon Bedrock
+- Test your chatbot through web requests
+
+##5 Clone the Repository
+
+cd %USERPROFILE%\Documents or respective directory prefer 
+
+git clone [HTTPS-URL]
+
+(Git install if not available) 
+
+# Navigate to the Project Directory
+
+cd nextwork-rag-api
+
+# Create Your Virtual Environment
+
+python -m venv venv
+
+( Install Python and pip if not to check the availabity run python --version and pip -- version )
+
+# Activate your virtual environment:
+
+.\venv\Scripts\activate
+
+To verify that your virtual environment is activated, run:
+
+echo $env:VIRTUAL_ENV
+
+## To run the API:
+
+python -m uvicorn main:app --reload
+
+# Install Requirements
+
+ModuleNotFoundError: No module named uvicorn
+
+
+cat requirements.txt
+
+pip3 install -r requirements.txt
+
+pip3 list
+
+
+Re-run the API 
+
+python -m uvicorn main:app --reload
+
+Visit the Root Endpoint-> http://127.0.0.1:8000
+
+##6 Test the Query Endpoint
+
+- Ask your chatbot a question over the API (using the query endpoint)
+- Troubleshoot errors in your API setup.
+
+
+Update the URL in your browser to:- This asks your chatbot "What is NextWork?"
+
+ http://127.0.0.1:8000/bedrock/query?text=What%20is%20NextWork.
+
+ 
+If you see an error message for Invalid type for parameter related to your knowledgeBaseId or modelArn, it means that your API isn't correctly configured with your Knowledge Base ID and Model ARN.
+
+# Add Environment Variables
+
+To fix the error in our API, we need to set our KNOWLEDGE_BASE_ID and MODEL_ARN as environment variables.
+
+Ctrl + C 
+
+Create a new .env file in your project directory:
+
+New-Item .env
+notepad .env
+
+Telling our API the environment values we want it to use:
+
+AWS_REGION=us-east-2
+KNOWLEDGE_BASE_ID=<your_knowledge_base_id>
+MODEL_ARN=<your_model_arn>
+
+Replace the placeholders
+
+Select File > Save
+
+# Verify Environment Variables
+
+cat .env
+
+# Run Your API Again
+
+python -m uvicorn main:app --reload
+
+Test API by query endpoint http://127.0.0.1:8000/bedrock/query?text=What%20is%20NextWork
+
+Ctrl + C 
+
+##7 Call an AI Model Directly
+
+- Run a modified version of your API to talk directly to the AI model
+- Update your environment variables
+
+# Run the Secret Mission API
+
+python -m uvicorn secret_mission:app --reload
+
+Head back to running API endpoint and enter a new URL that sends a request to the /bedrock/invoke endpoint
+
+http://127.0.0.1:8000/bedrock/invoke?text=Why%20is%20the%20sky%20blue?
+
+ERROR {"detail":"Model ID is missing"} 
+
+Add MODEL_ID to .env File
+
+Ctrl + C to stop API server 
+
+Add Model_ID to .env by 
+
+notepad .env 
+Select File > Save
+
+Verify Environment Variables 
+cat .env
+
+# Restart the Secret Mission API
+
+python -m uvicorn secret_mission:app --reload
+
+Let's test the invoke endpoint again
+
+http://127.0.0.1:8000/bedrock/invoke?text=Why%20is%20the%20sky%20blue?
+
+##8 Delete the resource 
+
+- Bedrock Knowledge Base
+- OpenSearch vector store
+- Delete the S3 bucket
+- Delete the IAM access key
+
+
+
+
+
+
+
+
+
+
+
