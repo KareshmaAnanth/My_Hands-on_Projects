@@ -1,274 +1,94 @@
-###### ***##*** ***Run AWS Commands*** 
+# 🤖 RAG Chatbot Series with Amazon Bedrock
 
+Welcome to the **RAG Chatbot Series**   a hands-on, 4-part journey where you’ll build a fully functional, AI-powered chatbot that can answer questions based on your own knowledge base using **Amazon Bedrock**, **FastAPI**, and **Python**.
 
+By the end, you’ll understand how Retrieval-Augmented Generation (RAG) works end-to-end from data ingestion to web deployment.
 
-To make sure CloudShell is working by running a simple command:
+---
 
-&nbsp;    
+## 🧠 Key Concepts
 
-* aws -- version 
+### 🔹 What is RAG (Retrieval-Augmented Generation)?
+RAG combines **information retrieval** and **text generation**.  
+It retrieves relevant data (from your knowledge base) and feeds it into a large language model (LLM) to generate accurate, context-aware answers.
 
+### 🔹 What is Amazon Bedrock?
+Amazon Bedrock is a **fully managed service** that lets you build and scale generative AI applications using foundation models (like Claude, Titan, and Llama) via a single API — without managing infrastructure.
 
+### 🔹 What are Embedding Models?
+Embedding models convert text into **numeric vector representations** — allowing semantic search and similarity matching between queries and documents.
 
-***#*** In CloudShell terminal. This command will ask your chatbot to answer the question "What is NextWork?"
+### 🔹 What is a Vector Store?
+A vector store (like **OpenSearch Serverless**) stores embeddings and lets the system **find meaning-related results**, not just keyword matches — enabling smarter retrieval for RAG.
 
+---
 
+## 📚 Project Overview
 
+| Project | Title | Description |
+|----------|--------|-------------|
+| 🧩 **Project 1** | [Set Up a RAG Chatbot in Amazon Bedrock](https://github.com/KareshmaAnanth/My_Hands-on_Projects/tree/73d0af2471b14656881bc20c2d84ff5be167a5ea/AI%20and%20ML/RAG%20Chatbot%20series/1%20Set%20up%20a%20%20RAG%20Chatbot%20in%20Bedrock) | Configure Bedrock, create a Knowledge Base, and connect your data in S3. |
+| 💬 **Project 2** | [Chat with Your Bot in the Terminal](https://github.com/KareshmaAnanth/My_Hands-on_Projects/tree/73d0af2471b14656881bc20c2d84ff5be167a5ea/AI%20and%20ML/RAG%20Chatbot%20series/2%20Chat%20with%20Bot%20in%20Terminal) | Interact directly with your RAG chatbot using Python CLI and Bedrock APIs. |
+| ⚙️ **Project 3** | [Create an API for Your RAG Chatbot](https://github.com/KareshmaAnanth/My_Hands-on_Projects/tree/73d0af2471b14656881bc20c2d84ff5be167a5ea/AI%20and%20ML/RAG%20Chatbot%20series/3%20Create%20API%20for%20RAG%20Chatbot) | Build a FastAPI backend exposing endpoints to query your Bedrock chatbot. |
+| 💻 **Project 4** | [Build a Web App for Your RAG Chatbot](https://github.com/KareshmaAnanth/My_Hands-on_Projects/tree/73d0af2471b14656881bc20c2d84ff5be167a5ea/AI%20and%20ML/RAG%20Chatbot%20series/4%20Web%20app%20for%20RAG%20Chatbot) | Create a frontend web app to chat through your browser using your API. |
 
+---
 
-aws bedrock-agent-runtime retrieve-and-generate \\
+## 🧭 How It All Connects
 
-&nbsp;  --input '{"text": "What is NextWork?"}' \\
+1. **Project 1:** Sets up your AWS foundation — Knowledge Base, S3, and Bedrock access.  
+2. **Project 2:** Tests your chatbot locally through command line.  
+3. **Project 3:** Exposes your chatbot as an API endpoint using FastAPI.  
+4. **Project 4:** Adds a web interface, creating a complete, interactive chatbot app.
 
-&nbsp;  --retrieve-and-generate-configuration '{
+Together, these projects demonstrate a **full-stack RAG pipeline** — from data to interface.
 
-&nbsp;      "knowledgeBaseConfiguration": {
+---
 
-&nbsp;          "knowledgeBaseId": "your\_knowledge\_base\_id",
+## 🧩 Architecture Overview
+```
+User → Web App (Frontend)
+↓
+FastAPI Backend
+↓
+Amazon Bedrock (LLM)
+↓
+Knowledge Base (Vector Store in OpenSearch)
+↓
+S3 Documents
+```
 
-&nbsp;          "modelArn": "your\_model\_arn"
 
-&nbsp; },
+---
 
-&nbsp; "type": "KNOWLEDGE\_BASE"
+## 🛠️ Tech Stack
+- **Amazon Bedrock** – foundation model access and orchestration  
+- **Amazon S3** – document storage  
+- **OpenSearch Serverless** – vector database for semantic retrieval  
+- **FastAPI** – backend API service  
+- **HTML, CSS, JavaScript** – web app interface  
+- **Python** – main programming language  
 
-}'
+---
 
+## 🌟 What You’ll Learn
+- How RAG systems retrieve and generate responses intelligently  
+- How to integrate AWS Bedrock with FastAPI  
+- How to design API and frontend layers for AI apps  
+- How to customize chatbot UI/UX  
+- How to clean up AWS resources safely  
 
+---
 
-Return error because need to replace your\_knowledge\_base\_id and your\_model\_arn, which are placeholders in the command, with your Knowledge Base ID and Model ARN.
+## 🧹 Clean Up Reminder
+After completing all four projects:
+- Delete the **Bedrock Knowledge Base**, **S3 bucket**, and **OpenSearch collection**.  
+- Revoke **IAM access keys** and remove your **virtual environment**.  
 
-###### 
+---
 
-###### \## ***Finding Your Knowledge Base and Model ARN \& IDs***
+## 🧠 Author
+Built by **Kareshma**, aspiring Cloud Engineer (DevOps, AI, AWS).  
+Exploring how **cloud + AI** can power the next generation of intelligent apps.
 
-
-
-1\) Find the Knowledge Base ID from the overview panel.
-
-2\) Find Your Model ARN
-
-
-
-In the CloudShell terminal, run the following command to find the ARN of your model.
-
-
-
-aws bedrock get-foundation-model --model-identifier <your-model-id>
-
-&nbsp;
-
-To find Model ID, Open Bedrock console again 
-
-&nbsp;- Select Model catalog
-
-&nbsp;- where you can find all the models available in Bedrock, and find metadata about each model - like the Model ID.
-
-&nbsp;- Find the Llama 3.3 70B Instruct model.
-
-&nbsp;- Copy the Model ID from the details panel
-
-
-
-Now again run this in cloudshell to return the model ARN 
-
-
-
-aws bedrock get-foundation-model --model-identifier meta.llama3-3-70b-instruct-v1:0
-
-
-
-
-
-\# Tidy up the terminal response
-
-Replace the KnowledgeBase ID and Model ARN with the command 
-
-
-
-aws bedrock-agent-runtime retrieve-and-generate \\
-
-&nbsp;   --input '{"text": "What is NextWork?"}' \\
-
-&nbsp;   --retrieve-and-generate-configuration '{
-
-&nbsp;       "knowledgeBaseConfiguration": {
-
-&nbsp;           "knowledgeBaseId": "your\_knowledge\_base\_id",
-
-&nbsp;           "modelArn": "your\_model\_arn"
-
-&nbsp;       },
-
-&nbsp;       "type": "KNOWLEDGE\_BASE"
-
-&nbsp;   }' \\
-
-&nbsp;   --query 'output.text' \\
-
-&nbsp;   --output text
-
-
-
-( output.text field in the response. This means the terminal response will only show the text of the response, not the raw information that's used to generate it)
-
-
-
-###### ***## Boost Your Chatbot's Knowledge*** 
-
-
-
-&nbsp;- Add new data to your S3 bucket.
-
-&nbsp;- Sync your Knowledge Base with the new data.
-
-&nbsp;- Test your RAG chatbot - can it answer questions about the new data?
-
-
-
-1\) create a new file called secret-mission.txt
-
-
-
-echo "Why did the coffee go to the police? Because it got mugged!" > secret-mission.txt
-
-
-
-2\) Check the contents of the file by running the command: 
-
-
-
-cat secret-mission.txt
-
-
-
-3\) Upload your new file from the CloudShell terminal to your S3 bucket.
-
-
-
-aws s3 cp secret-mission.txt s3://nextwork-rag-documentation-kareshma/secret-mission.txt
-
-
-
-(aws s3 cp command copies files to S3)
-
-
-
-4\) Check the contents of your S3 bucket
-
-
-
-aws s3 ls s3://nextwork-rag-documentation-kareshma/
-
-
-
-5\) Sync Your Knowledge Base
-
-
-
-Run the command below to start a new ingestion job. An ingestion job syncs your Knowledge Base with your data source.( Replace both placeholders) 
-
-
-
-aws bedrock-agent start-ingestion-job \\
-
-&nbsp;   --knowledge-base-id "your\_knowledge\_base\_id" \\
-
-&nbsp;   --data-source-id "your\_data\_source\_id"
-
-\- How to find Data source ID 
-
-Run this command in terminal and make sure to open cloudshell in Ohio region 
-
-
-
-aws bedrock-agent list-data-sources \\
-
-&nbsp;   --knowledge-base-id "your\_knowledge\_base\_id"
-
-
-
-Now,after replacing the both placeholders run the ingestion job again 
-
-Also can check the status of your sync by running the command
-
-
-
-aws bedrock-agent get-ingestion-job \\
-
-&nbsp;   --knowledge-base-id "your\_knowledge\_base\_id" \\
-
-&nbsp;   --data-source-id "your\_data\_source\_id" \\
-
-&nbsp;   --ingestion-job-id "your\_ingestion\_job\_id"
-
-
-
-\# once sync is complete test if knowledge base learned about new information
-
-
-
-aws bedrock-agent-runtime retrieve-and-generate \\
-
-&nbsp;   --input '{"text": "Why did the coffee go to the police?"}' \\
-
-&nbsp;   --retrieve-and-generate-configuration '{
-
-&nbsp;       "knowledgeBaseConfiguration": {
-
-&nbsp;           "knowledgeBaseId": "your\_knowledge\_base\_id",
-
-&nbsp;           "modelArn": "your\_model\_arn"
-
-&nbsp;       },
-
-&nbsp;       "type": "KNOWLEDGE\_BASE"
-
-&nbsp;   }' \\
-
-&nbsp;   --query 'output.text' \\
-
-&nbsp;   --output text
-
- 
-
-###### ***## Chat with AI Models Directly***
-
-
-
-Learn how to talk with AI models directly using the AWS CLI.
-
-
-
-To chat with an AI model directly, you can use the bedrock-runtime invoke-model command
-
-
-
-aws bedrock-runtime invoke-model \\
-
-&nbsp;   --model-id meta.llama3-3-70b-instruct-v1:0 \\
-
-&nbsp;   --body '{"prompt": "Write a short poem about cats"}' \\
-
-&nbsp;   --cli-binary-format raw-in-base64-out \\
-
-&nbsp;   --region us-east-2 \\
-
-&nbsp;   --output text \\
-
-&nbsp;   /dev/stdout
-
-
-
-###### ***## Delete the resources*** 
-
-
-
-* Bedrock Knowledge Base
-* OpenSearch vector store
-* S3 bucket
-
-
-
-
-
+---
