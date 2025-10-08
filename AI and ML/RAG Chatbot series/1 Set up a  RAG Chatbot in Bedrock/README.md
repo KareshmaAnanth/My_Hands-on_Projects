@@ -22,6 +22,12 @@
 
 RAG (Retrieval Augmented Generation) is an AI technique that enhances a model’s ability to provide context-specific answers by integrating retrieval mechanisms with generation. In this project, I will demonstrate RAG by training an AI chatbot using documents stored in Amazon S3. The chatbot will retrieve relevant data from a Knowledge Base indexed in Amazon OpenSearch and generate human-like responses based on the documents.
 
+## ⚙️ Prerequisites
+Before you start:
+- An **AWS account** with Bedrock access.
+- Access to **Amazon S3**, **IAM**, and **OpenSearch Service**.
+- Basic familiarity with **AWS Management Console** and **CLI**.
+
 ### Tools and concepts
 
 Services I used were Amazon Bedrock, S3, and OpenSearch. Key concepts I learnt include creating and managing a Knowledge Base, setting up vector stores for retrieval, and integrating S3 as a data source. I also explored guardrails, query modification, and best practices like cleaning up unused resources to avoid extra costs.
@@ -32,6 +38,47 @@ This project took me approximately 1 hour. The most challenging part was underst
 
 I did this project today to strengthen my hands-on skills with RAG in Amazon Bedrock and to better understand how to improve chatbot responses with advanced configurations. Yes, this project met my goals as I was able to practice key steps like tuning source chunks, custom prompts, and cleaning up resources, which boosted both my learning and confidence.
 
+
+---
+
+## 🎯 Project Objectives
+- Create and configure an **Amazon S3 bucket** to store your documents.
+- Set up a **Knowledge Base** in **Amazon Bedrock**.
+- Connect the Knowledge Base to an **OpenSearch vector store**.
+- Grant Bedrock permissions using an **IAM role**.
+- Test your setup by running a **sample query** through Bedrock.
+
+---
+
+## 🧩 Key Learnings
+- How to build and configure a Knowledge Base in **Amazon Bedrock**.  
+- Understanding how **vector stores** enable semantic search.  
+- Managing and linking **S3**, **IAM**, and **OpenSearch** resources.  
+- Testing retrieval capabilities before model integration.
+
+---
+## 🚀 Steps to Complete
+
+### 1. Create an S3 Bucket
+- Go to the **S3 Console**.
+- Create a new bucket:  
+  Example: `rag-chatbot-data-<your-initials>`
+- Upload your knowledge documents (e.g., `.pdf`, `.txt`, `.md`).
+
+### 2. Create a Knowledge Base in Amazon Bedrock
+- Navigate to **Amazon Bedrock Console → Knowledge Bases**.
+- Choose **Create Knowledge Base**.
+- Link your S3 bucket as the data source.
+- Choose **OpenSearch Serverless** as your vector store.
+- Select an **embedding model** (e.g., Amazon Titan Embeddings).
+- Wait for the Knowledge Base to finish syncing.
+
+### 3. Test the Knowledge Base
+Use the **Test Query** feature to ask something from your document.  
+Example:  
+> “What does this document explain about RAG?”
+
+If you get a contextually relevant answer, your setup is working!
 
 ---
 
@@ -104,5 +151,11 @@ After adjusting the source chunks and the generation prompt, my chatbot's respon
 ![Image](http://learn.nextwork.org/easygoing_white_heroic_bilberry/uploads/ai-rag-bedrock_improved-response)
 
 ---
+## 🧹 Clean Up Resources
+To avoid charges:
+- Delete your **Knowledge Base** from Bedrock.
+- Empty and delete the **S3 bucket**.
+- Remove the **IAM role** created for Bedrock.
+- Delete the **OpenSearch collection**.
 
 ---
