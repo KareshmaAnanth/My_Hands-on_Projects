@@ -30,7 +30,7 @@ A vector store (like **OpenSearch Serverless**) stores embeddings and lets the s
 | 🧩 **Project 1** | [Set Up a RAG Chatbot in Amazon Bedrock](https://github.com/KareshmaAnanth/My_Hands-on_Projects/tree/73d0af2471b14656881bc20c2d84ff5be167a5ea/AI%20and%20ML/RAG%20Chatbot%20series/1%20Set%20up%20a%20%20RAG%20Chatbot%20in%20Bedrock) | Configure Bedrock, create a Knowledge Base, and connect your data in S3. |
 | 💬 **Project 2** | [Chat with Your Bot in the Terminal](https://github.com/KareshmaAnanth/My_Hands-on_Projects/tree/73d0af2471b14656881bc20c2d84ff5be167a5ea/AI%20and%20ML/RAG%20Chatbot%20series/2%20Chat%20with%20Bot%20in%20Terminal) | Interact directly with your RAG chatbot using Python CLI and Bedrock APIs. |
 | ⚙️ **Project 3** | [Create an API for Your RAG Chatbot](https://github.com/KareshmaAnanth/My_Hands-on_Projects/tree/73d0af2471b14656881bc20c2d84ff5be167a5ea/AI%20and%20ML/RAG%20Chatbot%20series/3%20Create%20API%20for%20RAG%20Chatbot) | Build a FastAPI backend exposing endpoints to query your Bedrock chatbot. |
-| 💻 **Project 4** | [Build a Web App for Your RAG Chatbot](https://github.com/KareshmaAnanth/My_Hands-on_Projects/tree/73d0af2471b14656881bc20c2d84ff5be167a5ea/AI%20and%20ML/RAG%20Chatbot%20series/4%20Web%20app%20for%20RAG%20Chatbot) | Create a frontend web app to chat through your browser using your API. |
+| 💻 **Project 4** (Final) | [Build a Web App for Your RAG Chatbot](https://github.com/KareshmaAnanth/My_Hands-on_Projects/tree/73d0af2471b14656881bc20c2d84ff5be167a5ea/AI%20and%20ML/RAG%20Chatbot%20series/4%20Web%20app%20for%20RAG%20Chatbot) | Create a frontend web app to chat through your browser using your API. |
 
 ---
 
@@ -92,3 +92,4 @@ Built by **Kareshma**, aspiring Cloud Engineer (DevOps, AI, AWS).
 Exploring how **cloud + AI** can power the next generation of intelligent apps.
 
 ---
+
