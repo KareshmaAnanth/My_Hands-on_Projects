@@ -75,11 +75,7 @@ The architecture relies on cloud-native services such as:
 
 Below is the high-level architecture of the self-healing pipeline.
 
-```
-/architecture/self-healing-architecture.png
-```
-
-*(Replace this path with your actual diagram if needed)*
+![self-healing-architecture](https://github.com/KareshmaAnanth/My_Hands-on_Projects/blob/5fae23d8a460b0c537205f4522fd2b367e029e7c/AI%20and%20ML/Event-Driven%20Self-Healing%20Monitoring%20Infrastructure/AWS-Self-Healing%20Webserver%20Monitoring/architecture/self-healing-architecture.gif)
 
 ---
 
@@ -189,9 +185,7 @@ The demonstration shows the system recovering from a real failure.
 
 ## Video demonstration
 
-```
-/demo/self-healing-demo.mp4
-```
+![demo-walkthrough](https://drive.google.com/drive/folders/1HrXkiEz73MP4eMfnRpCZRkT3U08dT50p?usp=sharing)
 
 ---
 
