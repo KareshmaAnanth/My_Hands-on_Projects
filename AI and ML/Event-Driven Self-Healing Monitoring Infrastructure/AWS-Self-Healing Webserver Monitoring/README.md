@@ -185,7 +185,7 @@ The demonstration shows the system recovering from a real failure.
 
 ## Video demonstration
 
-![demo-walkthrough](https://drive.google.com/drive/folders/1HrXkiEz73MP4eMfnRpCZRkT3U08dT50p?usp=sharing)
+[demo-walkthrough](https://drive.google.com/drive/folders/1HrXkiEz73MP4eMfnRpCZRkT3U08dT50p?usp=sharing)
 
 ---
 
