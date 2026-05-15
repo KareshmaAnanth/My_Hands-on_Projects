@@ -1,0 +1,31 @@
+{
+  "source": "aws.cloudwatch",
+  "detail-type": "CloudWatch Alarm State Change",
+  "detail": {
+    "alarmName": "HighCPU-SelfHealingDemo",
+    "state": {
+      "value": "ALARM",
+      "reason": "Threshold Crossed: 1 out of 1 datapoints were greater than the threshold (80.0).",
+      "timestamp": "2026-04-25T15:00:00.000+0000"
+    },
+    "previousState": {
+      "value": "OK",
+      "timestamp": "2026-04-25T14:55:00.000+0000"
+    },
+    "configuration": {
+      "metrics": [
+        {
+          "metricStat": {
+            "metric": {
+              "namespace": "AWS/EC2",
+              "name": "CPUUtilization",
+              "dimensions": {
+                "InstanceId": "[[EC2_INSTANCE_ID=\"i-0abc1234def567890\"]]"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
