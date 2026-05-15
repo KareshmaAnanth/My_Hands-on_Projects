@@ -193,9 +193,7 @@ The demonstration shows the system recovering from a real failure.
 
 A detailed step-by-step project walkthrough with screenshots is available in the PDF documentation.
 
-```
-/documentation/Self-Healing-DevOps-Infrastructure.pdf
-```
+[Self-Healing-Infrastructure-Monitoring](https://github.com/KareshmaAnanth/My_Hands-on_Projects/tree/39ab2fb72b7fdf9945d06f38b9f5ec54339ef4f5/AI%20and%20ML/Event-Driven%20Self-Healing%20Monitoring%20Infrastructure/AWS-Self-Healing%20Webserver%20Monitoring/documentation)
 
 ## The documentation includes
 
