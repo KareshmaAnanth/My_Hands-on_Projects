@@ -1,5 +1,12 @@
 # 🚑 Event-Driven Self-Healing DevOps Monitoring System on AWS
+**Project Link:** [View Project](https://learn.nextwork.org/projects/c2f11661-fe60-4106-8034-5f705896ba61)
 
+**My Portfolio** [Here](https://learn.nextwork.org/easygoing_white_heroic_bilberry/portfolio)
+
+**Author:** Kareshma Rajaananthapadmanaban  
+**Linkedin:** [Click here](https://www.linkedin.com/in/kareshma-rajaananthapadmanaban/)
+
+---
 ## 👋 Welcome
 
 This project demonstrates how modern DevOps systems can automatically detect infrastructure failures and remediate them without human intervention.
@@ -12,7 +19,7 @@ This project simulates a real operational scenario where a production web server
 
 ---
 
-# ⚠️ The Problem
+## ⚠️ The Problem
 
 In traditional infrastructure environments, when a web service crashes:
 
@@ -27,7 +34,7 @@ In high-availability environments, systems must recover automatically without wa
 
 ---
 
-# 💡 The Solution
+## 💡 The Solution
 
 This project builds an **event-driven remediation pipeline** that:
 
@@ -48,7 +55,7 @@ The architecture relies on cloud-native services such as:
 
 ---
 
-## Tech Stack 
+## ⚙️Tech Stack 
 
 ## AWS Services Used
 
@@ -64,7 +71,7 @@ The architecture relies on cloud-native services such as:
 
 ---
 
-# 🏗 Architecture Diagram
+## 🏗 Architecture Diagram
 
 Below is the high-level architecture of the self-healing pipeline.
 
@@ -76,7 +83,7 @@ Below is the high-level architecture of the self-healing pipeline.
 
 ---
 
-# 🔄 Architecture Flow
+## 🔄 Architecture Flow
 
 The self-healing pipeline works through an automated event chain:
 
@@ -89,15 +96,26 @@ The self-healing pipeline works through an automated event chain:
 7. The nginx service is restarted automatically.  
 8. An SNS notification is sent confirming the remediation.
 
+## Workflow
+
+The Lambda function performs the following tasks:  
+  1. Receives CloudWatch alarm events  
+  2. Extracts instance ID from event payload  
+  3. Sends SSM Run Command to restart nginx  
+  4. Publishes notification to SNS
+
+Example command executed via SSM:
+sudo systemctl restart nginx
+
 ---
 
-# 🎯 Extra: Instance Auto-Restart
+## 🎯 Extra: Instance Auto-Restart
 
 To extend the automation, a **second event-driven workflow** was added.
 
 This pipeline detects when an EC2 instance enters the **stopped state** and restarts it automatically if the instance has opted in through a tag.
 
-### Workflow
+## Workflow
 
 1. EC2 emits a state change event when an instance stops.  
 2. EventBridge captures the stopped state event.  
@@ -109,7 +127,7 @@ This ensures that **critical infrastructure cannot remain offline accidentally.*
 
 ---
 
-# 🚀 Key DevOps Concepts Demonstrated
+## 🚀 Key DevOps Concepts Demonstrated
 
 - Event-driven automation  
 - Infrastructure monitoring  
@@ -119,7 +137,7 @@ This ensures that **critical infrastructure cannot remain offline accidentally.*
 
 ---
 
-# 📂 Project Structure
+## 📂 Project Structure
 
 ```
 aws-self-healing-infrastructure
@@ -127,8 +145,8 @@ aws-self-healing-infrastructure
 ├── architecture
 │   └── self-healing-architecture.png
 │
-├── demo
-│   └── self-healing-demo.mp4
+├── demo walkthrough
+│   └── self-healing-monitoring-demo.mp4
 │
 ├── documentation
 │   └── Self-Healing-Webserver-Full-Documentation.pdf
@@ -146,13 +164,16 @@ aws-self-healing-infrastructure
 │   └── ec2_stopped_event_pattern.json
 │
 ├── test-events
-│   └── cloudwatch_alarm_test_event.json
-│
+|   ├── cloudwatch_alarm_test_event.json
+│   └── simulate-web-crashes.sh
+|   
 └── README.md
+|
+└── Startup-script.sh
 ```
 --- 
 
-# 🎬 Demo: Self-Healing in Action
+## 🎬 Demo: Self-Healing in Action
 
 The demonstration shows the system recovering from a real failure.
 
@@ -166,7 +187,7 @@ The demonstration shows the system recovering from a real failure.
 6. nginx automatically comes back online.  
 7. A notification email confirms the remediation event.
 
-### Video demonstration
+## Video demonstration
 
 ```
 /demo/self-healing-demo.mp4
@@ -174,7 +195,7 @@ The demonstration shows the system recovering from a real failure.
 
 ---
 
-# 📘 Full Documentation
+## 📘 Full Documentation
 
 A detailed step-by-step project walkthrough with screenshots is available in the PDF documentation.
 
@@ -182,7 +203,7 @@ A detailed step-by-step project walkthrough with screenshots is available in the
 /documentation/Self-Healing-DevOps-Infrastructure.pdf
 ```
 
-### The documentation includes
+## The documentation includes
 
 - Architecture explanation 
 - Screenshots for every configuration step 
@@ -195,7 +216,7 @@ A detailed step-by-step project walkthrough with screenshots is available in the
 
 ---
 
-# 🧠 Key Concepts Learned
+## 🧠 Key Concepts Learned
 
 Modern cloud infrastructure should be able to detect failures and recover automatically without human intervention.
 
@@ -214,7 +235,7 @@ Instead of engineers manually restarting services, the system detects issues and
 
 ---
 
-# 🧹 Cleanup Reminder
+## 🧹 Cleanup Reminder
 
 If you deploy this project in your own AWS environment, remember to stop or terminate the EC2 instance when testing is complete to avoid unnecessary charges.
 
@@ -222,7 +243,7 @@ Most services used in this project remain within the free tier, but compute hour
 
 ---
 
-# 🚀 Future Improvement (Part 2)
+## 🚀 Future Improvement (Part 2)
 
 This project can be extended into an **AI-powered DevOps assistant**.
 
@@ -240,14 +261,15 @@ The Copilot will analyze infrastructure events and explain what happened, why it
 
 ---
 
-# 💭 Final Thoughts
+## 💭 Final Thoughts
 
 This project demonstrates how event-driven architectures can transform infrastructure operations by enabling systems to detect failures, respond automatically, and maintain service availability with minimal human intervention.
 
 It reflects how modern DevOps teams build resilient cloud systems that can monitor themselves, fix themselves, and notify operators when necessary.
+
 ---
 
-# 🎓 What This Project Demonstrates
+## 🎓 What This Project Demonstrates
 
 By completing this project, you learn how to design infrastructure that can:
 
@@ -261,8 +283,10 @@ This approach reflects **real-world DevOps reliability engineering practices use
 
 ---
 
+## 🧠 Author
+Built by **Kareshma**, aspiring Cloud DevOps Engineer (DevOps, AI, AWS).  
+Exploring how **cloud + AI** can power the next generation of intelligent apps.
 
----
 
 # 📜 License
 
