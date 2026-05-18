@@ -4,7 +4,8 @@
 
 **Project Link:** [View Project](http://learn.nextwork.org/projects/aws-compute-ecr)
 
-**My Portfolio** [Here](https://learn.nextwork.org/easygoing_white_heroic_bilberry/portfolio)
+**My Portfolio** [Here](https://learn.nextwork.org/easygoing_white_heroic_bilberry/portfolio) & 
+**Documentation Pdf:** [View here](https://github.com/KareshmaAnanth/My_Hands-on_Projects/blob/97a28e92e9d333b471472c634c773d4658362587/AWS%20Compute%20Docker/DockerECR/Documentation/Pdf-link.md)
 
 **Author:** Kareshma Rajaananthapadmanaban  
 **Linkedin:** [Click here](https://www.linkedin.com/in/kareshma-rajaananthapadmanaban/)
