@@ -4,7 +4,8 @@
 
 **Project Link:** [View Project](http://learn.nextwork.org/projects/aws-compute-eb)
 
-**My Portfolio** [Here](https://learn.nextwork.org/easygoing_white_heroic_bilberry/portfolio)
+**My Portfolio** [Here](https://learn.nextwork.org/easygoing_white_heroic_bilberry/portfolio) &
+**Documentation Pdf:** [View here](https://github.com/KareshmaAnanth/My_Hands-on_Projects/blob/1d13649c98f64d2ff01cba3cb1040510c7fdb446/AWS%20Compute%20Docker/Compute/Documentation/Pdf-link.md)
 
 
 **Author:** Kareshma Rajaananthapadmanaban  
